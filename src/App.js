@@ -5,9 +5,9 @@ export default function InputChanges() {
   const [value, setValue] = useState('')
   const [count, setCount] = useState(-1)
 
-  // useEffect(() => {
-  //   setCount(c=>c + 1);
-  // });
+  useEffect(() => {
+    setCount(c=>c + 1);
+  },[value]);
 
   function onChange(event) {
     setValue(event.target.value)
